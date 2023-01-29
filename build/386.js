@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkchawaramo_theme=self.webpackChunkchawaramo_theme||[]).push([[386],{386:(e,a,t)=>{t.r(a),t.d(a,{default:()=>r});var n=t(307);t(196);const r=e=>{let{content:a}=e;return(0,n.createElement)("div",null,"MainSlider")}}}]);

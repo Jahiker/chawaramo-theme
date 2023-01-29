@@ -1,0 +1,34 @@
+@import "./vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: $colorLight;
+}
+
+html {
+  font-family: $font_default;
+  font-size: 62.5%;
+  color: $colorDark;
+}
+
+.container {
+    display: block;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main {
+    display: block;
+    width: 100%;
+    min-height: 90vh;
+}
+
+@import "./header"

@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    &_wrapper {
+        .logo {
+            max-height: 100px;
+            display: block;
+
+            img {
+                height: 100px;
+                width: auto;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+}

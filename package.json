@@ -1,0 +1,24 @@
+{
+  "name": "chawaramo-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@wordpress/scripts": "^25.2.0",
+    "axios": "^1.2.6"
+  },
+  "scripts": {
+    "preview": "npm-run-all --parallel sync start",
+    "sync": "browser-sync start -p 'localhost/example' --files '**/*.php' 'build/*.js' 'build/*.css'",
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "npm-run-all": "^4.1.5"
+  }
+}
