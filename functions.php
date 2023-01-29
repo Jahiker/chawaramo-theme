@@ -9,6 +9,55 @@ function chawaramo_load_assets()
 add_action('wp_enqueue_scripts', 'chawaramo_load_assets');
 
 /**
+ * Disable Gutenberg
+ */
+add_filter('use_block_editor_for_post', '__return_false', 10);
+add_filter('use_block_editor_for_post_type', '__return_false', 10);
+
+/**
+ * Allow big images
+ */
+add_filter('big_image_size_threshold', '__return_false');
+
+/**
+ * Register ACF Custom Menu
+ * https://www.advancedcustomfields.com/resources/acf_add_options_page/
+ */
+function ditto_menu_settings()
+{
+    if (function_exists('acf_add_options_page')) {
+        acf_add_options_page(array(
+            'page_title'    => 'Theme Settings',
+            'menu_title'    => 'Theme Settings',
+            'menu_slug'     => 'theme-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      =>  true
+        ));
+
+        acf_add_options_sub_page(array(
+            'page_title'     => 'Header',
+            'menu_title'     => 'Header',
+            'parent_slug'   => 'theme-settings',
+        ));
+
+        acf_add_options_sub_page(array(
+            'page_title'     => 'Footer',
+            'menu_title'     => 'Footer',
+            'parent_slug'   => 'theme-settings',
+        ));
+
+        acf_add_options_sub_page(array(
+            'page_title'     => '404 Error',
+            'menu_title'     => '404 Error',
+            'parent_slug'   => 'theme-settings',
+        ));
+    }
+}
+
+add_action('init', 'ditto_menu_settings');
+
+
+/**
  * Theme Includes
  */
 $chawaramo_users_includes = array(

@@ -7,4 +7,3 @@ const instance = axios.create({
 const pageId = `${_chwPageID_}`;
 
 export {instance, pageId};
-

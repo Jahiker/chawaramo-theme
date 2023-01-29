@@ -4,7 +4,8 @@
   "main": "index.js",
   "dependencies": {
     "@wordpress/scripts": "^25.2.0",
-    "axios": "^1.2.6"
+    "axios": "^1.2.6",
+    "react-loader-spinner": "^5.3.4"
   },
   "scripts": {
     "preview": "npm-run-all --parallel sync start",

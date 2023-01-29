@@ -14,7 +14,6 @@ if (!defined('ABSPATH')) {
 <!-- React render -->
 <div id="root"></div>
 
-<footer>Your footer content here.</footer>
 <?php wp_footer(); ?>
 </body>
 

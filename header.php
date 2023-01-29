@@ -36,11 +36,3 @@ if (!defined('ABSPATH')) {
 </head>
 
 <body <?php body_class(); ?>>
-
-  <header class="header container">
-    <div class="header_wrapper">
-      <a href="/" class="logo">
-        <img src="<?= get_template_directory_uri() . '/src/assets/Logo.png' ?>" alt="Logo Chawaramo">
-      </a>
-    </div>
-  </header>

@@ -20,9 +20,13 @@ html {
 
 .container {
     display: block;
-    max-width: 1350px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
+    
+    @media screen and (min-width: 990px) {
+      max-width: 1350px;
+    }
 }
 
 .main {

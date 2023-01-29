@@ -2,7 +2,7 @@ import React from 'react'
 
 const BannerImageText = ({ content }) => {
   return (
-    <div>BannerImageText</div>
+    <div className='container'>BannerImageText</div>
   )
 }
 
