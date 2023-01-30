@@ -3,12 +3,12 @@ import { ProgressBar } from "react-loader-spinner";
 
 import "./styles.scss";
 
-const Loader = ({ content }) => {
+const Loader = () => {
   return (
     <div className="loader">
       <ProgressBar
-        height="100"
-        width="400"
+        height="120"
+        width="500"
         ariaLabel="progress-bar-loading"
         wrapperStyle={{}}
         wrapperClass="progress-bar-wrapper"

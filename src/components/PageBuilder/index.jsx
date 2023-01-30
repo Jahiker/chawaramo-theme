@@ -3,7 +3,7 @@ import React, { lazy, Suspense } from "react";
 const MainSlider = lazy(() => import("../MainSlider"));
 const BannerImageText = lazy(() => import("../BannerImageText"));
 
-export const Directory = ({ content, component }) => {
+const PageBuilder = ({ content, component }) => {
   return (
     <Suspense fallback={<div></div>}>
       {component == "main_slider" ? <MainSlider content={content} /> : null}
@@ -13,3 +13,5 @@ export const Directory = ({ content, component }) => {
     </Suspense>
   );
 };
+
+export default PageBuilder;

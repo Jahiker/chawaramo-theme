@@ -782,7 +782,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Loader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Loader */ "./src/components/Loader/index.jsx");
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Header */ "./src/components/Header/index.jsx");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Footer */ "./src/components/Footer/index.jsx");
-/* harmony import */ var _Directory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Directory */ "./src/components/Directory/index.jsx");
+/* harmony import */ var _PageBuilder__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PageBuilder */ "./src/components/PageBuilder/index.jsx");
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/main.scss */ "./src/styles/main.scss");
 
 
@@ -811,47 +811,12 @@ const App = () => {
   }, []);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, loading && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Loader__WEBPACK_IMPORTED_MODULE_3__["default"], null), headerData && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
     content: headerData
-  }), blocks && blocks.map(block => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Directory__WEBPACK_IMPORTED_MODULE_6__.Directory, {
+  }), blocks && blocks.map(block => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_PageBuilder__WEBPACK_IMPORTED_MODULE_6__["default"], {
     content: block.content,
     component: block.acf_fc_layout
   })), footerData && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
     content: footerData
   }));
-};
-
-/***/ }),
-
-/***/ "./src/components/Directory/index.jsx":
-/*!********************************************!*\
-  !*** ./src/components/Directory/index.jsx ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Directory": () => (/* binding */ Directory)
-/* harmony export */ });
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-const MainSlider = (0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(() => __webpack_require__.e(/*! import() */ "src_components_MainSlider_index_jsx").then(__webpack_require__.bind(__webpack_require__, /*! ../MainSlider */ "./src/components/MainSlider/index.jsx")));
-const BannerImageText = (0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(() => __webpack_require__.e(/*! import() */ "src_components_BannerImageText_index_jsx").then(__webpack_require__.bind(__webpack_require__, /*! ../BannerImageText */ "./src/components/BannerImageText/index.jsx")));
-const Directory = _ref => {
-  let {
-    content,
-    component
-  } = _ref;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, {
-    fallback: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null)
-  }, component == "main_slider" ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(MainSlider, {
-    content: content
-  }) : null, component == "banner_image_text" ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(BannerImageText, {
-    content: content
-  }) : null);
 };
 
 /***/ }),
@@ -935,15 +900,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Loader = _ref => {
-  let {
-    content
-  } = _ref;
+const Loader = () => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "loader"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_loader_spinner__WEBPACK_IMPORTED_MODULE_2__.ProgressBar, {
-    height: "100",
-    width: "400",
+    height: "120",
+    width: "500",
     ariaLabel: "progress-bar-loading",
     wrapperStyle: {},
     wrapperClass: "progress-bar-wrapper",
@@ -952,6 +914,42 @@ const Loader = _ref => {
   }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Loader);
+
+/***/ }),
+
+/***/ "./src/components/PageBuilder/index.jsx":
+/*!**********************************************!*\
+  !*** ./src/components/PageBuilder/index.jsx ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const MainSlider = (0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(() => __webpack_require__.e(/*! import() */ "src_components_MainSlider_index_jsx").then(__webpack_require__.bind(__webpack_require__, /*! ../MainSlider */ "./src/components/MainSlider/index.jsx")));
+const BannerImageText = (0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(() => __webpack_require__.e(/*! import() */ "src_components_BannerImageText_index_jsx").then(__webpack_require__.bind(__webpack_require__, /*! ../BannerImageText */ "./src/components/BannerImageText/index.jsx")));
+const PageBuilder = _ref => {
+  let {
+    content,
+    component
+  } = _ref;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, {
+    fallback: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null)
+  }, component == "main_slider" ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(MainSlider, {
+    content: content
+  }) : null, component == "banner_image_text" ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(BannerImageText, {
+    content: content
+  }) : null);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PageBuilder);
 
 /***/ }),
 

@@ -4,7 +4,7 @@ import { instance as axios, pageId } from "../data";
 import Loader from "./Loader";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Directory } from "./Directory";
+import PageBuilder from "./PageBuilder";
 
 import "../styles/main.scss";
 
@@ -35,7 +35,7 @@ export const App = () => {
       {headerData && <Header content={headerData} />}
       {blocks &&
         blocks.map((block) => (
-          <Directory content={block.content} component={block.acf_fc_layout} />
+          <PageBuilder content={block.content} component={block.acf_fc_layout} />
         ))}
       {footerData && <Footer content={footerData} />}
     </>
